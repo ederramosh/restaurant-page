@@ -4,10 +4,8 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
-      <div className="container-fluid">
-        <div className="col-4"></div>
-        <div className="col-4"></div>
-        <div className="collapse navbar-collapse col-4" id="navbarNav">
+      <div className="container">
+        <div className="collapse navbar-collapse col justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <NavLink className="nav-link active" aria-current="page" to="/">
