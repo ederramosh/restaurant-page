@@ -1,6 +1,6 @@
 import React from 'react'
 
-function NotFoundPage() {
+const NotFoundPage = () => {
   return (
     <>
         <main>

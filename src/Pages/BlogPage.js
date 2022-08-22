@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BlogPage() {
+const BlogPage = () => {
   return (
     <>
         <main>

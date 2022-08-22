@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className='row'>
         <article className='col-6 article-footer'>

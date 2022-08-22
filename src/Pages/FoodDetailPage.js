@@ -1,6 +1,6 @@
 import React from 'react'
 
-function FoodDetailPage() {
+const FoodDetailPage = () => {
   return (
     <>
         <main>

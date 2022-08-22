@@ -9,7 +9,7 @@ import MenuPage from "../Pages/MenuPage";
 import NotFoundPage from "../Pages/NotFoundPage";
 import ReservationPage from "../Pages/ReservationPage";
 
-function AppRouter() {
+const AppRouter = () => {
   return (
     <BrowserRouter>
       <Navbar />

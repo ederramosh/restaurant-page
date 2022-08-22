@@ -1,9 +1,15 @@
 import React from 'react'
+import logo from '../img/logo.svg';
 
-function Header({title}) {
+const Header = ({title}) => {
   return (
-    <header className="row text-center">
-        <h1>{title}</h1>
+    <header className="row text-center align-items-center fw-bolder text-warning px-5">
+        <div className='col-8'>
+        <span className='fs-1'>{title}</span>
+        </div>
+        <div className='col-4'>
+        <img src={logo} alt="chinese food" />
+        </div>
     </header>
   )
 }
