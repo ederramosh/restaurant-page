@@ -26,12 +26,10 @@ header {
 }
 
 .right-article {
-    background-color: lightgreen;
     min-height: 300px;
 }
 
 .left-article {
-    background-color: lightskyblue;
     min-height: 300px;
 }
 

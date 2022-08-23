@@ -7,6 +7,8 @@ import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase/FirebaseConnection";
 
 import homeImage from '../img/home-article.png';
+import reservationImage from '../img/reservacion.svg';
+import locationImage from '../img/location.svg';
 
 const HomePage = () => {
   
@@ -41,7 +43,7 @@ const HomePage = () => {
           <img src={homeImage} alt="Li Fong Food Family" />
         </div>
         <div className="col-8 px-5">
-          <p className="fst-italic">Los platillos provienen de nuestra familia, provienen desde nuestras raíces. Nuestros platillos contienen nuestra cultura, nuestra historia y con ella cultivamos lazos fuertes con tu familia.</p>
+          <p className="fst-italic fs-4">Los platillos provienen de nuestra familia, provienen desde nuestras raíces. Nuestros platillos contienen nuestra cultura, nuestra historia y con ella cultivamos lazos fuertes con tu familia.</p>
         </div>
       </main>
       <section className="row menu-home mb-5">
@@ -65,9 +67,18 @@ const HomePage = () => {
           );
         })}
       </section>
-      <section className="row">
-        <article className="col-6 right-article"></article>
-        <article className="col-6 left-article"></article>
+      <section className='row'>
+        <article className='col-5  right-article text-center'>
+          <NavLink to='/reservation'>
+            <img src={reservationImage} alt="Reservaciones Li Fong Food"/>
+          </NavLink>
+        </article>
+        <article className="col-7 left-article text-center">
+          <h3>Nuestra Ubicación</h3>
+        <NavLink to='/contactus'>
+            <img src={locationImage} alt="Reservaciones Li Fong Food"/>
+          </NavLink>
+        </article>
       </section>
       <Footer />
     </>
