@@ -12,12 +12,10 @@ import locationImage from '../img/location.svg';
 
 const HomePage = () => {
   
-  const [commonDishes, setCommonDishes] = useState([]);
-  
-  const REF_COLLECTION = collection(db, "popular-dishes");
+  const [commonDishes, setCommonDishes] = useState([])
   
   const listenCommonDishes = () => {
-    onSnapshot(REF_COLLECTION, (snapshot) => {
+    onSnapshot(collection(db, "popular-dishes"), (snapshot) => {
       const dishes = [];
       snapshot.docs.forEach((dish) => {
         dishes.push({
@@ -31,8 +29,7 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    listenCommonDishes();
-    
+    listenCommonDishes()
   }, []);
 
   return (
@@ -46,7 +43,7 @@ const HomePage = () => {
           <p className="fst-italic fs-4">Los platillos provienen de nuestra familia, provienen desde nuestras raíces. Nuestros platillos contienen nuestra cultura, nuestra historia y con ella cultivamos lazos fuertes con tu familia.</p>
         </div>
       </main>
-      <section className="row menu-home mb-5">
+      <section className="row menu mb-5">
         <h3 className="text-center mb-4">Platos Favoritos</h3>
         {commonDishes.map((dish, key) => {
           return (
@@ -58,9 +55,9 @@ const HomePage = () => {
               <img src={dish.img} className="card-img-top mt-3" alt="..." />
               <div className="card-body">
                 <h5 className="card-title">{dish.name}</h5>
-                <p className="card-text">{dish.description}</p>
-                <NavLink to="/detail-food/1" className="btn btn-primary">
-                  Detalles...
+                <p className="card-text">{dish.comment}</p>
+                <NavLink to={`/detail-food/${dish.id}`} className="btn btn-primary">
+                  Ver mas...
                 </NavLink>
               </div>
             </div>
