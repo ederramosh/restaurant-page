@@ -7,7 +7,7 @@ const ImprimeMenu = ({appetizer}) => {
     <>
       {appetizer.map((menu, key) => {
         return (
-          <div className="card col-4 my-3" style={{ width: "18rem" }} key={key}>
+          <div className="card col-4 px-3 mx-3 my-3" key={key}>
             <img src={menu.img} className="card-img-top mt-3" alt="..." />
             <div className="card-body text-center">
               <h5 className="card-title">{menu.name}</h5>
