@@ -16,6 +16,24 @@ export const SolicitaMenu = (setMenu, requestMenu) => {
       });
 }
 
+export const SolicitaMenuId = (setMenu, requestMenu, idDish) => {
+  onSnapshot(collection(db, requestMenu), (snapshot) => {
+    const items = [];
+    snapshot.docs.forEach((banquetes) => {
+      items.push({
+        ...banquetes.data(),
+        id: banquetes?.id,
+      });
+    });
+    // console.log(items);
+    let dishSelected = items.filter( ( item ) => {
+      return item.id === idDish;
+    })
+    console.log(dishSelected);
+    return setMenu(dishSelected);
+  });
+}
+
 export const RegistraReserva = async ( nuevaReserva ) => {
   console.log('ingresa reservacion');
   addDoc(collection(db, 'reservaciones'), nuevaReserva);

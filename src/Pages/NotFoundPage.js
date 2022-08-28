@@ -1,13 +1,20 @@
-import React from 'react'
+import React from 'react';
+import Footer from '../Components/Footer';
+import Header from '../Components/Header';
+
+import notfounded from "../img/notfounded.png";
 
 const NotFoundPage = () => {
   return (
     <>
-        <main>
-            <article>
-                <h3>Not Founded Page</h3>
+        <Header title="Welcome to Li Fong Food" />
+        <main className='row'>
+            <article className='col text-center'>
+                <h3 className="my-4">Not Founded Page</h3>
+                <img src={notfounded} className="img-fluid" alt="Li Long Food" />
             </article>
         </main>
+        <Footer />
     </>
   )
 }

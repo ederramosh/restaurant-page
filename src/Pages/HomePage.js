@@ -24,7 +24,6 @@ const HomePage = () => {
         });
       });
       setCommonDishes(dishes);
-      console.log(dishes);
     });
   };
 

@@ -19,12 +19,12 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link active" aria-current="page" to="/reservation">
-                Reservations
+                Reservaciones
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link active" aria-current="page" to="/contactus">
-                Contact Us
+                Contactanos
               </NavLink>
             </li>
           </ul>

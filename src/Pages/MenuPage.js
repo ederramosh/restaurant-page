@@ -55,7 +55,7 @@ const MenuPage = () => {
 
   return (
     <>
-        <Header title="Disfruta de Menu de la Casa" />
+        <Header title="Welcome to Li Fong Food" />
         <main className='container my-3'>
             <h3 className="text-center mb-4">Entradas</h3>
             <article className='row menu'>
