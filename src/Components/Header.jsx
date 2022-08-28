@@ -8,7 +8,7 @@ const Header = ({title}) => {
         <span className='fs-1'>{title}</span>
         </div>
         <div className='col-4'>
-        <img src={logo} alt="chinese food" />
+        <img src={logo} className="img-fluid" alt="chinese food" />
         </div>
     </header>
   )

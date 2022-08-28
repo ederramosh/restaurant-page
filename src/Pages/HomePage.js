@@ -36,11 +36,11 @@ const HomePage = () => {
     <>
       <Header title="Welcome to Li Fong Food" />
       <main className="row align-items-center mt-2">
-        <div className="col-4 home-article">
-          <img src={homeImage} alt="Li Fong Food Family" />
+        <div className="col-lg home-article text-center">
+          <img src={homeImage} className="img-fluid" alt="Li Fong Food Family" />
         </div>
-        <div className="col-8 px-5">
-          <p className="fst-italic fs-4">Los platillos provienen de nuestra familia, provienen desde nuestras raíces. Nuestros platillos contienen nuestra cultura, nuestra historia y con ella cultivamos lazos fuertes con tu familia.</p>
+        <div className="col-lg px-5">
+          <p className="fst-italic fs-4 mision">Los platillos provienen de nuestra familia, provienen desde nuestras raíces. Nuestros platillos contienen nuestra cultura, nuestra historia y con ella cultivamos lazos fuertes con tu familia.</p>
         </div>
       </main>
       <section className="row menu mb-5">
@@ -48,7 +48,7 @@ const HomePage = () => {
         {commonDishes.map((dish, key) => {
           return (
             <div
-              className="card col-4"
+              className="card col-4 my-2"
               style={{ width: "18rem" }}
               key={key}
             >
@@ -56,7 +56,7 @@ const HomePage = () => {
               <div className="card-body">
                 <h5 className="card-title">{dish.name}</h5>
                 <p className="card-text">{dish.comment}</p>
-                <NavLink to={`/detail-food/${dish.id}`} className="btn btn-primary">
+                <NavLink to={`/detail-food/${dish.id}`} className="btn btn-warning my-button">
                   Ver mas...
                 </NavLink>
               </div>
@@ -65,15 +65,15 @@ const HomePage = () => {
         })}
       </section>
       <section className='row'>
-        <article className='col-5  right-article text-center'>
+        <article className='col-lg right-article text-center'>
           <NavLink to='/reservation'>
-            <img src={reservationImage} alt="Reservaciones Li Fong Food"/>
+            <img src={reservationImage} className="img-fluid" alt="Reservaciones Li Fong Food"/>
           </NavLink>
         </article>
-        <article className="col-7 left-article text-center">
+        <article className="col-lg left-article text-center">
           <h3>Nuestra Ubicación</h3>
         <NavLink to='/contactus'>
-            <img src={locationImage} alt="Reservaciones Li Fong Food"/>
+            <img src={locationImage} className="img-fluid" alt="Reservaciones Li Fong Food"/>
           </NavLink>
         </article>
       </section>

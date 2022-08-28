@@ -12,8 +12,8 @@ import ReservationPage from "../Pages/ReservationPage";
 const AppRouter = () => {
   return (
     <BrowserRouter>
-      <Navbar />
       <div className="container main-container">
+      <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/menu" element={<MenuPage />} />

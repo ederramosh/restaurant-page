@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-light">
-      <div className="container">
+    <nav className="navbar navbar-expand bg-light-lg my-text-size">
+      <div className="container-fluid">
         <div className="collapse navbar-collapse col justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
@@ -20,11 +20,6 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink className="nav-link active" aria-current="page" to="/reservation">
                 Reservations
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link active" aria-current="page" to="/blog">
-                Blog
               </NavLink>
             </li>
             <li className="nav-item">

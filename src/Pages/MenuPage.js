@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import Footer from '../Components/Footer';
 import Header from '../Components/Header'
-import ImprimeMenu from '../Components/ImprimeMenu'
+import PrintMenu from '../Components/PrintMenu'
 
-import SolicitaMenu from '../firebase/SolicitaMenu';
+import { SolicitaMenu } from '../firebase/firebaseFunctions';
 
 const MenuPage = () => {
 
@@ -58,25 +59,26 @@ const MenuPage = () => {
         <main className='container my-3'>
             <h3 className="text-center mb-4">Entradas</h3>
             <article className='row menu'>
-              <ImprimeMenu appetizer={appetizer}/>
+              <PrintMenu appetizer={appetizer}/>
             </article>
             <h3 className="text-center mb-4 mt-5">Platillos Principales</h3>
             <article className='row menu'>
-              <ImprimeMenu appetizer={individualDishes}/>
+              <PrintMenu appetizer={individualDishes}/>
             </article>
             <h3 className="text-center mb-4 mt-5">Arroces y Chow Mein</h3>
             <article className='row menu'>
-              <ImprimeMenu appetizer={secondDishes}/>
+              <PrintMenu appetizer={secondDishes}/>
             </article>
             <h3 className="text-center mb-4 mt-5">Banquetes</h3>
             <article className='row menu'>
-              <ImprimeMenu appetizer={comboBanquets}/>
+              <PrintMenu appetizer={comboBanquets}/>
             </article>
             <h3 className="text-center mb-4 mt-5">Bebidas</h3>
             <article className='row menu'>
-              <ImprimeMenu appetizer={menuDrinks}/>
+              <PrintMenu appetizer={menuDrinks}/>
             </article>
         </main>
+        <Footer />
     </>
   )
 }
